@@ -38,22 +38,23 @@ You can preview the production build with `npm run preview`.
 > To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
 
 ## Awards List
- - Meta of the Year
- - Worst Meta of the Year
- - Labour of love award
- - Clip of the Year
- - Moment of the Year
- - Game of the Year
- - Worst Game of the Year
- - Duo of the Year
- - Best argument
- - Biggest Rivalry
- - Discord Rose Award
- - Wilted Rose Award
- - The Endurance Award
- - Content Creator of the Year
- - Content of the Year
- - Best Dota Match of the Year
- - 5 vs 5 of the Year
- - Most Improved Member
- - Nightmare Award
+
+- Meta of the Year
+- Worst Meta of the Year
+- Labour of love award
+- Clip of the Year
+- Moment of the Year
+- Game of the Year
+- Worst Game of the Year
+- Duo of the Year
+- Best argument
+- Biggest Rivalry
+- Discord Rose Award
+- Wilted Rose Award
+- The Endurance Award
+- Content Creator of the Year
+- Content of the Year
+- Best Dota Match of the Year
+- 5 vs 5 of the Year
+- Most Improved Member
+- Nightmare Award

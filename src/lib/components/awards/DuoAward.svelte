@@ -1,3 +1,4 @@
+
 <script lang="ts">
     import * as Card from "$lib/components/ui/card/index.js";
 	import type { getAllAwards } from "$lib/server/db/functions";
