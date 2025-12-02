@@ -1,32 +1,30 @@
 <script lang="ts">
 	import type { getAllAwards } from '$lib/server/db/functions';
-    import DuoAward from '../awards/DuoAward.svelte';
+	import DuoAward from '../awards/DuoAward.svelte';
 	import GameAward from '../awards/GameAward.svelte';
-    import MiscAward from '../awards/MiscAward.svelte';
-    import SingleAward from '../awards/SingleAward.svelte';
-	let awards: ReturnType<typeof getAllAwards> = $props()
+	import MiscAward from '../awards/MiscAward.svelte';
+	import SingleAward from '../awards/SingleAward.svelte';
+	let {
+		awards,
+		allNominations
+	}: { awards: Awaited<ReturnType<typeof getAllAwards>>; allNominations: Record<string, unknown> } =
+		$props();
 
-	let allNominations = $state<Record<string, any>>({});
-	
-	function handleNomination(awardId: string, nominationData: any) {
+	const handleNomination = (awardId: string, nominationData: unknown) => {
 		allNominations[awardId] = nominationData;
-		console.log('All nominations:', allNominations);
-	}
-
+	};
 </script>
 
-<div class="flex flex-col gap-4">
-	{#await awards then awardsResolved}
-	{#each awardsResolved as award, i (i)}
-		{#if award.type === 'single'}
-			<SingleAward {award} {handleNomination} />
-		{:else if award.type === 'duo'}
-			<DuoAward {award} {handleNomination} />
-			{:else if award.type === 'misc'}
-				<MiscAward {award} {handleNomination} />
+<div class="flex w-full flex-col items-center gap-16">
+	{#each awards as award, i (i)}
+		{#if award.type === 'one-person'}
+			<SingleAward {award} {handleNomination} initialValue="" />
+		{:else if award.type === 'two-person'}
+			<DuoAward {award} {handleNomination} initialValue="" />
+		{:else if award.type === 'misc'}
+			<MiscAward {award} {handleNomination} initialValue="" />
 		{:else if award.type === 'game'}
-		<GameAward {award} {handleNomination} />
+			<GameAward {award} {handleNomination} initialValue="" />
 		{/if}
 	{/each}
-	{/await}
 </div>

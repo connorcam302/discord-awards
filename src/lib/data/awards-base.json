@@ -1,97 +1,97 @@
 [
-  {
-    "name": "Meta of the Year",
-    "type": "misc",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nisl est, aliquet at commodo ac, porta faucibus purus. Nulla nulla est, pharetra pharetra leo nec, volutpat accumsan ligula."
-  },
-  {
-    "name": "Worst Meta of the Year",
-    "type": "misc",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nisl est, aliquet at commodo ac, porta faucibus purus. Nulla nulla est, pharetra pharetra leo nec, volutpat accumsan ligula."
-  },
-  {
-    "name": "Labour of love award",
-    "type": "game",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nisl est, aliquet at commodo ac, porta faucibus purus. Nulla nulla est, pharetra pharetra leo nec, volutpat accumsan ligula."
-  },
-  {
-    "name": "Clip of the Year",
-    "type": "misc",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nisl est, aliquet at commodo ac, porta faucibus purus. Nulla nulla est, pharetra pharetra leo nec, volutpat accumsan ligula."
-  },
-  {
-    "name": "Moment of the Year",
-    "type": "misc",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nisl est, aliquet at commodo ac, porta faucibus purus. Nulla nulla est, pharetra pharetra leo nec, volutpat accumsan ligula."
-  },
-  {
-    "name": "Game of the Year",
-    "type": "game",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nisl est, aliquet at commodo ac, porta faucibus purus. Nulla nulla est, pharetra pharetra leo nec, volutpat accumsan ligula."
-  },
-  {
-    "name": "Worst Game of the Year",
-    "type": "game",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nisl est, aliquet at commodo ac, porta faucibus purus. Nulla nulla est, pharetra pharetra leo nec, volutpat accumsan ligula."
-  },
-  {
-    "name": "Duo of the Year",
-    "type": "one-person",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nisl est, aliquet at commodo ac, porta faucibus purus. Nulla nulla est, pharetra pharetra leo nec, volutpat accumsan ligula."
-  },
-  {
-    "name": "Best argument",
-    "type": "two-person",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nisl est, aliquet at commodo ac, porta faucibus purus. Nulla nulla est, pharetra pharetra leo nec, volutpat accumsan ligula."
-  },
-  {
-    "name": "Biggest Rivalry",
-    "type": "two-person",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nisl est, aliquet at commodo ac, porta faucibus purus. Nulla nulla est, pharetra pharetra leo nec, volutpat accumsan ligula."
-  },
-  {
-    "name": "Discord Rose Award",
-    "type": "one-person",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nisl est, aliquet at commodo ac, porta faucibus purus. Nulla nulla est, pharetra pharetra leo nec, volutpat accumsan ligula."
-  },
-  {
-    "name": "Wilted Rose Award",
-    "type": "one-person",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nisl est, aliquet at commodo ac, porta faucibus purus. Nulla nulla est, pharetra pharetra leo nec, volutpat accumsan ligula."
-  },
-  {
-    "name": "The Endurance Award",
-    "type": "one-person",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nisl est, aliquet at commodo ac, porta faucibus purus. Nulla nulla est, pharetra pharetra leo nec, volutpat accumsan ligula."
-  },
-  {
-    "name": "Content Creator of the Year",
-    "type": "one-person",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nisl est, aliquet at commodo ac, porta faucibus purus. Nulla nulla est, pharetra pharetra leo nec, volutpat accumsan ligula."
-  },
-  {
-    "name": "Content of the Year",
-    "type": "misc",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nisl est, aliquet at commodo ac, porta faucibus purus. Nulla nulla est, pharetra pharetra leo nec, volutpat accumsan ligula."
-  },
-  {
-    "name": "Best Dota Match of the Year",
-    "type": "misc",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nisl est, aliquet at commodo ac, porta faucibus purus. Nulla nulla est, pharetra pharetra leo nec, volutpat accumsan ligula."
-  },
-  {
-    "name": "5 vs 5 of the Year",
-    "type": "misc",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nisl est, aliquet at commodo ac, porta faucibus purus. Nulla nulla est, pharetra pharetra leo nec, volutpat accumsan ligula."
-  },
-  {
-    "name": "Most Improved Member",
-    "type": "one-person",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nisl est, aliquet at commodo ac, porta faucibus purus. Nulla nulla est, pharetra pharetra leo nec, volutpat accumsan ligula."
-  },
-  {
-    "name": "Nightmare Award",
-    "type": "one-person",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nisl est, aliquet at commodo ac, porta faucibus purus. Nulla nulla est, pharetra pharetra leo nec, volutpat accumsan ligula."
-  }
+	{
+		"name": "Meta of the Year",
+		"type": "misc",
+		"description": "Sometimes when we're bored, we ask ourselves \"if you could go anywhere, where would you go?\" and find ourselves reminiscing of a period where our entire lives were structured around doing this one thing. Sometimes you can't recreate the magic you had and that's what makes the meta so special."
+	},
+	{
+		"name": "Worst Meta of the Year",
+		"type": "misc",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nisl est, aliquet at commodo ac, porta faucibus purus. Nulla nulla est, pharetra pharetra leo nec, volutpat accumsan ligula."
+	},
+	{
+		"name": "Labour of love award",
+		"type": "game",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nisl est, aliquet at commodo ac, porta faucibus purus. Nulla nulla est, pharetra pharetra leo nec, volutpat accumsan ligula."
+	},
+	{
+		"name": "Clip of the Year",
+		"type": "misc",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nisl est, aliquet at commodo ac, porta faucibus purus. Nulla nulla est, pharetra pharetra leo nec, volutpat accumsan ligula."
+	},
+	{
+		"name": "Moment of the Year",
+		"type": "misc",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nisl est, aliquet at commodo ac, porta faucibus purus. Nulla nulla est, pharetra pharetra leo nec, volutpat accumsan ligula."
+	},
+	{
+		"name": "Game of the Year",
+		"type": "game",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nisl est, aliquet at commodo ac, porta faucibus purus. Nulla nulla est, pharetra pharetra leo nec, volutpat accumsan ligula."
+	},
+	{
+		"name": "Worst Game of the Year",
+		"type": "game",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nisl est, aliquet at commodo ac, porta faucibus purus. Nulla nulla est, pharetra pharetra leo nec, volutpat accumsan ligula."
+	},
+	{
+		"name": "Duo of the Year",
+		"type": "two-person",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nisl est, aliquet at commodo ac, porta faucibus purus. Nulla nulla est, pharetra pharetra leo nec, volutpat accumsan ligula."
+	},
+	{
+		"name": "Best argument",
+		"type": "two-person",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nisl est, aliquet at commodo ac, porta faucibus purus. Nulla nulla est, pharetra pharetra leo nec, volutpat accumsan ligula."
+	},
+	{
+		"name": "Biggest Rivalry",
+		"type": "two-person",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nisl est, aliquet at commodo ac, porta faucibus purus. Nulla nulla est, pharetra pharetra leo nec, volutpat accumsan ligula."
+	},
+	{
+		"name": "Discord Rose Award",
+		"type": "one-person",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nisl est, aliquet at commodo ac, porta faucibus purus. Nulla nulla est, pharetra pharetra leo nec, volutpat accumsan ligula."
+	},
+	{
+		"name": "Wilted Rose Award",
+		"type": "one-person",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nisl est, aliquet at commodo ac, porta faucibus purus. Nulla nulla est, pharetra pharetra leo nec, volutpat accumsan ligula."
+	},
+	{
+		"name": "The Endurance Award",
+		"type": "one-person",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nisl est, aliquet at commodo ac, porta faucibus purus. Nulla nulla est, pharetra pharetra leo nec, volutpat accumsan ligula."
+	},
+	{
+		"name": "Content Creator of the Year",
+		"type": "one-person",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nisl est, aliquet at commodo ac, porta faucibus purus. Nulla nulla est, pharetra pharetra leo nec, volutpat accumsan ligula."
+	},
+	{
+		"name": "Content of the Year",
+		"type": "misc",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nisl est, aliquet at commodo ac, porta faucibus purus. Nulla nulla est, pharetra pharetra leo nec, volutpat accumsan ligula."
+	},
+	{
+		"name": "Best Dota Match of the Year",
+		"type": "misc",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nisl est, aliquet at commodo ac, porta faucibus purus. Nulla nulla est, pharetra pharetra leo nec, volutpat accumsan ligula."
+	},
+	{
+		"name": "5 vs 5 of the Year",
+		"type": "misc",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nisl est, aliquet at commodo ac, porta faucibus purus. Nulla nulla est, pharetra pharetra leo nec, volutpat accumsan ligula."
+	},
+	{
+		"name": "Most Improved Member",
+		"type": "one-person",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nisl est, aliquet at commodo ac, porta faucibus purus. Nulla nulla est, pharetra pharetra leo nec, volutpat accumsan ligula."
+	},
+	{
+		"name": "Nightmare Award",
+		"type": "one-person",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nisl est, aliquet at commodo ac, porta faucibus purus. Nulla nulla est, pharetra pharetra leo nec, volutpat accumsan ligula."
+	}
 ]
