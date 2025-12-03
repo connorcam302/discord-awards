@@ -6,11 +6,13 @@
 	let {
 		award,
 		initialValue = '',
-		handleNomination
+		handleNomination,
+		isSignedIn
 	}: {
 		award: Awaited<ReturnType<typeof getAllAwards>>[number];
 		initialValue: string;
 		handleNomination: (awardId: string, data: unknown) => void;
+		isSignedIn: boolean;
 	} = $props();
 
 	let { id, name, description } = award;
@@ -27,6 +29,8 @@
 		<Card.Description>{description}</Card.Description>
 	</Card.Header>
 	<Card.Content>
-		<Input bind:value placeholder="Enter your answer" />
+		{#if isSignedIn}
+			<Input bind:value placeholder="Enter your answer" />
+		{/if}
 	</Card.Content>
 </Card.Root>

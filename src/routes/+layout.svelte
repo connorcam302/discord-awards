@@ -31,13 +31,15 @@
 
 <svelte:head>
 	<link rel="icon" href={favicon} />
+	<title>The Discord Awards</title>
 </svelte:head>
+
 <div class="mx-auto max-w-screen-lg px-4">
 	<div class="flex justify-end py-2">
 		<div class="flex gap-4">
 			<Avatar.Root>
 				<Avatar.Image src={user?.identities[0].identity_data.picture} alt="@shadcn" />
-				<Avatar.Fallback>CN</Avatar.Fallback>
+				<Avatar.Fallback>?</Avatar.Fallback>
 			</Avatar.Root>
 			{#if user}
 				<div>

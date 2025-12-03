@@ -1,97 +1,92 @@
 [
-	{
-		"name": "Meta of the Year",
-		"type": "misc",
-		"description": "Sometimes when we're bored, we ask ourselves \"if you could go anywhere, where would you go?\" and find ourselves reminiscing of a period where our entire lives were structured around doing this one thing. Sometimes you can't recreate the magic you had and that's what makes the meta so special."
-	},
-	{
-		"name": "Worst Meta of the Year",
-		"type": "misc",
-		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nisl est, aliquet at commodo ac, porta faucibus purus. Nulla nulla est, pharetra pharetra leo nec, volutpat accumsan ligula."
-	},
-	{
-		"name": "Labour of love award",
-		"type": "game",
-		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nisl est, aliquet at commodo ac, porta faucibus purus. Nulla nulla est, pharetra pharetra leo nec, volutpat accumsan ligula."
-	},
-	{
-		"name": "Clip of the Year",
-		"type": "misc",
-		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nisl est, aliquet at commodo ac, porta faucibus purus. Nulla nulla est, pharetra pharetra leo nec, volutpat accumsan ligula."
-	},
-	{
-		"name": "Moment of the Year",
-		"type": "misc",
-		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nisl est, aliquet at commodo ac, porta faucibus purus. Nulla nulla est, pharetra pharetra leo nec, volutpat accumsan ligula."
-	},
-	{
-		"name": "Game of the Year",
-		"type": "game",
-		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nisl est, aliquet at commodo ac, porta faucibus purus. Nulla nulla est, pharetra pharetra leo nec, volutpat accumsan ligula."
-	},
-	{
-		"name": "Worst Game of the Year",
-		"type": "game",
-		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nisl est, aliquet at commodo ac, porta faucibus purus. Nulla nulla est, pharetra pharetra leo nec, volutpat accumsan ligula."
-	},
-	{
-		"name": "Duo of the Year",
-		"type": "two-person",
-		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nisl est, aliquet at commodo ac, porta faucibus purus. Nulla nulla est, pharetra pharetra leo nec, volutpat accumsan ligula."
-	},
-	{
-		"name": "Best argument",
-		"type": "two-person",
-		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nisl est, aliquet at commodo ac, porta faucibus purus. Nulla nulla est, pharetra pharetra leo nec, volutpat accumsan ligula."
-	},
-	{
-		"name": "Biggest Rivalry",
-		"type": "two-person",
-		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nisl est, aliquet at commodo ac, porta faucibus purus. Nulla nulla est, pharetra pharetra leo nec, volutpat accumsan ligula."
-	},
-	{
-		"name": "Discord Rose Award",
-		"type": "one-person",
-		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nisl est, aliquet at commodo ac, porta faucibus purus. Nulla nulla est, pharetra pharetra leo nec, volutpat accumsan ligula."
-	},
-	{
-		"name": "Wilted Rose Award",
-		"type": "one-person",
-		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nisl est, aliquet at commodo ac, porta faucibus purus. Nulla nulla est, pharetra pharetra leo nec, volutpat accumsan ligula."
-	},
-	{
-		"name": "The Endurance Award",
-		"type": "one-person",
-		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nisl est, aliquet at commodo ac, porta faucibus purus. Nulla nulla est, pharetra pharetra leo nec, volutpat accumsan ligula."
-	},
-	{
-		"name": "Content Creator of the Year",
-		"type": "one-person",
-		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nisl est, aliquet at commodo ac, porta faucibus purus. Nulla nulla est, pharetra pharetra leo nec, volutpat accumsan ligula."
-	},
-	{
-		"name": "Content of the Year",
-		"type": "misc",
-		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nisl est, aliquet at commodo ac, porta faucibus purus. Nulla nulla est, pharetra pharetra leo nec, volutpat accumsan ligula."
-	},
-	{
-		"name": "Best Dota Match of the Year",
-		"type": "misc",
-		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nisl est, aliquet at commodo ac, porta faucibus purus. Nulla nulla est, pharetra pharetra leo nec, volutpat accumsan ligula."
-	},
-	{
-		"name": "5 vs 5 of the Year",
-		"type": "misc",
-		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nisl est, aliquet at commodo ac, porta faucibus purus. Nulla nulla est, pharetra pharetra leo nec, volutpat accumsan ligula."
-	},
-	{
-		"name": "Most Improved Member",
-		"type": "one-person",
-		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nisl est, aliquet at commodo ac, porta faucibus purus. Nulla nulla est, pharetra pharetra leo nec, volutpat accumsan ligula."
-	},
-	{
-		"name": "Nightmare Award",
-		"type": "one-person",
-		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nisl est, aliquet at commodo ac, porta faucibus purus. Nulla nulla est, pharetra pharetra leo nec, volutpat accumsan ligula."
-	}
+  {
+    "name": "Meta of the Year",
+    "type": "misc",
+    "description": "Sometimes when we're bored, we ask ourselves \"if you could go anywhere, where would you go?\" and find ourselves reminiscing of a period where our entire lives were structured around doing this one thing. Sometimes you can't recreate the magic you had and that's what makes the meta so special."
+  },
+  {
+    "name": "Worst Meta of the Year",
+    "type": "misc",
+    "description": "Not all metas are created equal. Sometimes you achieve meta status but you never should have. Some metas simply command a place in the Discord. They are trying on relationships and taxing on time, but in order to have incredible metas we need to have terrible ones."
+  },
+  {
+    "name": "Labour of love award",
+    "type": "game",
+    "description": "On occasions, just the game is not enough. The game is great sure, but the people involved are what make it great. We to recognise those that need a bit more help to get over the line, and that's what the labour of love award is for. It's a way to acknowledge the hard work of the Discord just to keep some games going."
+  },
+  {
+    "name": "Clip of the Year",
+    "type": "misc",
+    "description": "If anything, this should be your warning to get some clipping software. Clip are the tomes of our time. Without our clips moments just happen and pass us by, but with clips they live forever, for better or for worse. Submit this via a YouTube link or streamable, ensure the clip is not private."
+  },
+  {
+    "name": "Moment of the Year",
+    "type": "misc",
+    "description": "Not every moment can be caught on camera. Some happened in voice, some happened in game and some unfortunately happened at 11AM in #yo-chat on a work day. Sometimes they were caught on camera but one clip simply wasn't enough (the far away girlfriend incident). This award is to recognise those moments that were potentially lost to time."
+  },
+  {
+    "name": "Game of the Year",
+    "type": "game",
+    "description": "The g*me awards bedamned we're doing it here. At the risk of Expedition 33 winning the real award, we're doing it here. Game of the Year, I'm not explaining this one."
+  },
+  {
+    "name": "Worst Game of the Year",
+    "type": "game",
+    "description": "The only award Expedition 33 should be winning. Some games are genuinely rancid, but they won't be winning this. The true worst games are the ones that your friends like that you don't like. The one's that you cannot escape from but cannot enjoy either. FM26 anyone?"
+  },
+  {
+    "name": "Pookies of the Year",
+    "type": "two-person",
+    "description": "Urban dictionary states that \"One Pookie without the other Pookie is nothing. They are cute together, boop each other's noses, and love being weird. Together they are themselves. Though they are complete opposites, their personalities balance out, and together they will grow for the rest of their lives. Nothing else matters when the Pookies are together.\" and I could not agree more, and realistically this one should be a landslide."
+  },
+  {
+    "name": "Best argument",
+    "type": "two-person",
+    "description": "We don't always get along and that's okay. I'd argue that we aren't arguing because we dislike each other but that we like each other so much that we want to see those around us be better. Not from a place of hatred but a place of care. I'd even go as far as to say the Discord hasn't had a single unproductive argument."
+  },
+  {
+    "name": "Biggest Rivalry",
+    "type": "two-person",
+    "description": "Messi and Ronaldo. Senna and Prost. Tom and Jerry. Evan and texture packs. Rivalries come from a place of admiration. Desire to overcome or rise above what stands before you, some rivalries are friendly on the surface but some boil over into shows of passion and emotion. Rivalries are what make the fabrics of competition in this Discord."
+  },
+  {
+    "name": "Discord Rose Award",
+    "type": "one-person",
+    "description": "Some people (not many) in this Discord are a genuine joy to be around. Whenever they join the call, vibes are up. Whenever they play a game, vibes are up. Some roses aren't always around, some are here every day. Isn't it tiring maintaining the vibes and decorum around these parts?"
+  },
+  {
+    "name": "The Endurance Award",
+    "type": "one-person",
+    "description": "It's a tiring and taxing effort. It's a lot of work. But it's worth it. Some people in this community are extremely taxing, but this person despite that manages to ignore the branches to see the forest. This is likely the most important award because without them it all falls to pieces."
+  },
+  {
+    "name": "Content Creator of the Year",
+    "type": "one-person",
+    "description": "Content is an art in itself making the creator the artist. A modern day Michelangelo they take both pride and care in the content the create. All that they do is in the name of content. Their life is a show and Discord is the stage."
+  },
+  {
+    "name": "Content of the Year",
+    "type": "misc",
+    "description": "Certain pieces of content are like a box set. Every day you close bad screen, look at good screen and hope that the next episode is on. Often they're short lived but that doesn't discredit them, the ripples of this content will form the waves in our memories."
+  },
+  {
+    "name": "Best Dota Match of the Year",
+    "type": "misc",
+    "description": "For some this might take some digging but for others it will come straight through them. Some matches are the best because they were competitive or potentially for more nefarious reasons. Please submit this via a dotabuff link or a match ID"
+  },
+  {
+    "name": "5 vs 5 of the Year",
+    "type": "misc",
+    "description": "5 vs 5s don't happen often, but when they do it's got easily the highest bar for enjoyment. It also has the lowest but we never consider that when going in. And the same comments get thrown around after, from \"The teams weren't fair.\" to \"x person wasn't trying.\" we've heard it all. But that's just par of the course. For dota games please send the game number from the inhouse sheet or for king of the cord send the match id (the part of the URL after matches). If you're having trouble submitting reach out."
+  },
+  {
+    "name": "Most Improved Member",
+    "type": "one-person",
+    "description": "Becoming better is a journey, and some people fear the mountain. But this person rose to it. Improvement can be in any field, as a person, in games, in life. We don't judge because improvement is difficult no matter the destination."
+  },
+  {
+    "name": "Nightmare Award",
+    "type": "one-person",
+    "description": "Lets end this with a little bit of self-deprecation. We're all human, and we're all fallible. Some people are better than others, but we all have our own quirks and flaws. But this person is genuinely a monster when they want to be. It is not okay and they need to stop. Be better."
+  }
 ]

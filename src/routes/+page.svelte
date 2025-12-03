@@ -1,32 +1,54 @@
 <script lang="ts">
+	import * as Carousel from '$lib/components/ui/carousel/index.js';
 	import AwardBlocks from '$lib/components/blocks/AwardBlocks.svelte';
+	import Header from '$lib/components/Header.svelte';
 	import { Button } from '$lib/components/ui/button/index.js';
 	import type { PageData } from './$types';
+	import { supabaseClient } from '$lib/supabase/client';
 
 	let { data }: { data: PageData } = $props();
 
-	let { awards } = data;
+	let { awards, user } = data;
 
-	const handleSubmit = (data: unknown) => {
-		console.log('Data:', data);
+	const handleSubmit = (nominations: unknown) => {
+		fetch('/api/nominations/add', {
+			method: 'POST',
+			body: JSON.stringify({ nominations, user })
+		}).then((res) => {
+			if (res.ok) alert('Nominations submitted!');
+			if (res.status === 400) alert('Ensure all fields are filled in.');
+		});
 	};
 
-	let allNominations = $state<Record<string, unknown>>({});
+	async function signInWithGoogle() {
+		const { error } = await supabaseClient.auth.signInWithOAuth({
+			provider: 'google',
+			options: {
+				redirectTo: `${window.location.origin}/auth/callback`
+			}
+		});
+		if (error) console.error(error);
+	}
 
-	$inspect(allNominations);
+	let allNominations = $state<Record<string, unknown>>({});
+	let isSignedIn = $state<boolean>(false);
+
+	if (user) {
+		isSignedIn = true;
+	}
 </script>
 
+<Header />
 <div
 	class="font-montserrat mx-auto flex max-w-4xl flex-col gap-8 px-2 py-8 text-center text-lg/snug"
 >
 	<div class="flex flex-col gap-4">
-		<h1 class="text-6xl font-bold">The Discord Awards</h1>
 		<div>
 			Welcome to the Discord Awards, a celebration of this community we have built together.
 			Individually we are weak, like a single twig, but as a bundle we form a mighty fine group of
 			pals. As the hours pass each year, we come to know a bit more about eachother, sometimes it's
-			as mysterious as Joe's relationship with his Dad other times other times its as unwanted as
-			Steve's sex life.
+			as mysterious as Joe's relationship with his Dad other times its as unwanted as Steve's sex
+			life.
 			<br />
 			<br />
 			We are proud of what we have achieved this year and don't look back in anger at what we did not.
@@ -40,12 +62,40 @@
 			you asking for 22 more minutes.
 		</div>
 	</div>
+	<div>
+		<Carousel.Root class="mx-auto h-96 w-80 md:w-full">
+			<Carousel.Content class="h-96 w-80">
+				<Carousel.Item><img src="/bingy.png" /></Carousel.Item>
+				<Carousel.Item><img src="/sam-brother.png" /></Carousel.Item>
+				<Carousel.Item><img src="/evan-masterlock.png" /></Carousel.Item>
+				<Carousel.Item><img src="/liam-fit.png" /></Carousel.Item>
+				<Carousel.Item><img src="/discord-dms.png" /></Carousel.Item>
+				<Carousel.Item><img src="/burncastle-hairline.png" /></Carousel.Item>
+				<Carousel.Item><img src="/frenchy.png" /></Carousel.Item>
+				<Carousel.Item><img src="/rematch.jpg" /></Carousel.Item>
+				<Carousel.Item><img src="/only-scissors.png" /></Carousel.Item>
+				<Carousel.Item><img src="/dk-mirror.png" /></Carousel.Item>
+				<Carousel.Item><img src="/connor-silent-hill.png" /></Carousel.Item>
+				<Carousel.Item><img src="/matty-malenia.png" /></Carousel.Item>
+				<Carousel.Item><img src="/liam-pizza.png" /></Carousel.Item>
+				<Carousel.Item><img src="/potential-man.png" /></Carousel.Item>
+				<Carousel.Item><img src="/potto-summon.jpg" /></Carousel.Item>
+				<Carousel.Item><img src="/fm-tournament.png" /></Carousel.Item>
+				<Carousel.Item><img src="/shy-guy.png" /></Carousel.Item>
+				<Carousel.Item><img src="/skyrim-mirror.png" /></Carousel.Item>
+				<Carousel.Item><img src="/potto-pokemon.png" /></Carousel.Item>
+				<Carousel.Item><img src="/steve.png" /></Carousel.Item>
+				<Carousel.Item><img src="/tifty-sports-interactive.png" /></Carousel.Item>
+			</Carousel.Content>
+			<Carousel.Previous />
+			<Carousel.Next />
+		</Carousel.Root>
+	</div>
 	<div class="flex flex-col gap-4">
 		<h1 class="text-3xl font-bold">How It Works</h1>
-
-		For the single person awards, you should not be nominating yourself, (if you do your vote will
-		be voided), but for two person awards you are able to nominte yourself. You will need to be
-		logged in to vote and nominate so an audit trail exists.
+		For the single person awards, you should not be nominating yourself, (if you do your vote will be
+		voided), but for two person awards you are able to nominte yourself. You will need to be logged in
+		to vote and nominate so an audit trail exists.
 	</div>
 	<div class="flex flex-col gap-4">
 		<div class="flex flex-col items-center gap-2 text-left">
@@ -92,6 +142,16 @@
 		</div>
 	</div>
 </div>
-<AwardBlocks {awards} {allNominations} />
+{#if !isSignedIn}
+	<div class="flex items-center justify-center py-8">
+		<Button onclick={signInWithGoogle} class="h-16 text-3xl font-bold ">Sign in to submit</Button>
+	</div>
+{/if}
 
-<Button onclick={() => handleSubmit(allNominations)}>Submit</Button>
+<AwardBlocks {awards} {allNominations} {isSignedIn} />
+
+<div class="flex items-center justify-center py-8">
+	<Button onclick={() => handleSubmit(allNominations)} class="h-16 text-3xl font-bold "
+		>Submit Nominations</Button
+	>
+</div>

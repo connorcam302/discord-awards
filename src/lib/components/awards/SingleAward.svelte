@@ -8,11 +8,13 @@
 	let {
 		award,
 		initialValue = '',
-		handleNomination
+		handleNomination,
+		isSignedIn
 	}: {
 		award: Awaited<ReturnType<typeof getAllAwards>>[number];
 		initialValue: string;
 		handleNomination: (awardId: string, data: any) => void;
+		isSignedIn: boolean;
 	} = $props();
 
 	let { id, name, description } = award;
@@ -29,11 +31,13 @@
 		<Card.Description>{description}</Card.Description>
 	</Card.Header>
 	<Card.Content>
-		<NativeSelect.Root bind:value>
-			<NativeSelect.Option value="">Nominate</NativeSelect.Option>
-			{#each players as player (player.name)}
-				<NativeSelect.Option value={player.name}>{player.name}</NativeSelect.Option>
-			{/each}
-		</NativeSelect.Root>
+		{#if isSignedIn}
+			<NativeSelect.Root bind:value>
+				<NativeSelect.Option value="">Nominate</NativeSelect.Option>
+				{#each players as player (player.name)}
+					<NativeSelect.Option value={player.name}>{player.name}</NativeSelect.Option>
+				{/each}
+			</NativeSelect.Root>
+		{/if}
 	</Card.Content>
 </Card.Root>

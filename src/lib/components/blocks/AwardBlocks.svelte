@@ -6,9 +6,13 @@
 	import SingleAward from '../awards/SingleAward.svelte';
 	let {
 		awards,
-		allNominations
-	}: { awards: Awaited<ReturnType<typeof getAllAwards>>; allNominations: Record<string, unknown> } =
-		$props();
+		allNominations,
+		isSignedIn
+	}: {
+		awards: Awaited<ReturnType<typeof getAllAwards>>;
+		allNominations: Record<string, unknown>;
+		isSignedIn: boolean;
+	} = $props();
 
 	const handleNomination = (awardId: string, nominationData: unknown) => {
 		allNominations[awardId] = nominationData;
@@ -18,13 +22,13 @@
 <div class="flex w-full flex-col items-center gap-16">
 	{#each awards as award, i (i)}
 		{#if award.type === 'one-person'}
-			<SingleAward {award} {handleNomination} initialValue="" />
+			<SingleAward {award} {handleNomination} initialValue="" {isSignedIn} />
 		{:else if award.type === 'two-person'}
-			<DuoAward {award} {handleNomination} initialValue="" />
+			<DuoAward {award} {handleNomination} initialValue="" {isSignedIn} />
 		{:else if award.type === 'misc'}
-			<MiscAward {award} {handleNomination} initialValue="" />
+			<MiscAward {award} {handleNomination} initialValue="" {isSignedIn} />
 		{:else if award.type === 'game'}
-			<GameAward {award} {handleNomination} initialValue="" />
+			<GameAward {award} {handleNomination} initialValue="" {isSignedIn} />
 		{/if}
 	{/each}
 </div>
