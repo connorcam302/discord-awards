@@ -5,6 +5,7 @@
 	import { Button } from '$lib/components/ui/button/index.js';
 	import type { PageData } from './$types';
 	import { supabaseClient } from '$lib/supabase/client';
+	import { PUBLIC_REDIRECT_URL } from '$env/static/public';
 
 	let { data }: { data: PageData } = $props();
 
@@ -24,7 +25,7 @@
 		const { error } = await supabaseClient.auth.signInWithOAuth({
 			provider: 'google',
 			options: {
-				redirectTo: `${window.location.origin}/auth/callback`
+				redirectTo: `${PUBLIC_REDIRECT_URL}/auth/callback`
 			}
 		});
 		if (error) console.error(error);

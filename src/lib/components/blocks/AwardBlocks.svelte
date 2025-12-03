@@ -22,13 +22,13 @@
 <div class="flex w-full flex-col items-center gap-16">
 	{#each awards as award, i (i)}
 		{#if award.type === 'one-person'}
-			<SingleAward {award} {handleNomination} initialValue="" {isSignedIn} />
+			<SingleAward {award} {handleNomination} initialValue={award.initialValue} {isSignedIn} />
 		{:else if award.type === 'two-person'}
-			<DuoAward {award} {handleNomination} initialValue="" {isSignedIn} />
+			<DuoAward {award} {handleNomination} initialValue={award.initialValue} {isSignedIn} />
 		{:else if award.type === 'misc'}
-			<MiscAward {award} {handleNomination} initialValue="" {isSignedIn} />
+			<MiscAward {award} {handleNomination} initialValue={award.initialValue} {isSignedIn} />
 		{:else if award.type === 'game'}
-			<GameAward {award} {handleNomination} initialValue="" {isSignedIn} />
+			<GameAward {award} {handleNomination} initialValue={award.initialValue} {isSignedIn} />
 		{/if}
 	{/each}
 </div>

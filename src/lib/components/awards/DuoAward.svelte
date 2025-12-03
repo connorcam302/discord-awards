@@ -34,18 +34,21 @@
 	</Card.Header>
 	<Card.Content>
 		{#if isSignedIn}
-			<NativeSelect.Root bind:value={person1}>
-				<NativeSelect.Option value="">Nominate</NativeSelect.Option>
-				{#each players as player (player.name)}
-					<NativeSelect.Option value={player.name}>{player.name}</NativeSelect.Option>
-				{/each}
-			</NativeSelect.Root>
-			<NativeSelect.Root bind:value={person2}>
-				<NativeSelect.Option value="">Nominate</NativeSelect.Option>
-				{#each players as player (player.name)}
-					<NativeSelect.Option value={player.name}>{player.name}</NativeSelect.Option>
-				{/each}
-			</NativeSelect.Root>
+			<div class="flex items-center gap-4">
+				<NativeSelect.Root bind:value={person1}>
+					<NativeSelect.Option value="">Nominate</NativeSelect.Option>
+					{#each players as player (player.name)}
+						<NativeSelect.Option value={player.name}>{player.name}</NativeSelect.Option>
+					{/each}
+				</NativeSelect.Root>
+				And
+				<NativeSelect.Root bind:value={person2}>
+					<NativeSelect.Option value="">Nominate</NativeSelect.Option>
+					{#each players as player (player.name)}
+						<NativeSelect.Option value={player.name}>{player.name}</NativeSelect.Option>
+					{/each}
+				</NativeSelect.Root>
+			</div>
 		{/if}
 	</Card.Content>
 </Card.Root>
