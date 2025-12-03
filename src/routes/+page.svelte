@@ -54,8 +54,8 @@
 			<br />
 			We are proud of what we have achieved this year and don't look back in anger at what we did not.
 			Whether it's staying up at the weekend or breathing in the dark, lying on your side falling asleep
-			watching Bingy stream, as our live move on the moments we share together never change. We are here
-			to celebrate our successes and to celebrate our failures.
+			watching Bingy stream, as our lives move on the moments we share together never change. We are
+			here to celebrate our successes and to celebrate our failures.
 			<br />
 			<br />
 			It's not always about the people either, we might set the tone, but the content sets the rhythm
