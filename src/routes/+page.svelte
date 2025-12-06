@@ -11,14 +11,27 @@
 
 	let { awards, user } = data;
 
+	let allNominations = $state<Record<string, unknown>>({});
+	let isSignedIn = $state<boolean>(false);
+	let isLoading = $state<boolean>(false);
+
 	const handleSubmit = (nominations: unknown) => {
+		isLoading = true;
 		fetch('/api/nominations/add', {
 			method: 'POST',
 			body: JSON.stringify({ nominations, user })
-		}).then((res) => {
-			if (res.ok) alert('Nominations submitted!');
-			if (res.status === 400) alert('Ensure all fields are filled in.');
-		});
+		})
+			.then((res) => {
+				if (res.ok) alert('Nominations submitted!');
+				if (res.status === 400) alert('Ensure all fields are filled in.');
+
+				isLoading = false;
+			})
+			.catch((err) => {
+				alert('Something went wrong, please try again.');
+				console.error(err);
+				isLoading = false;
+			});
 	};
 
 	async function signInWithGoogle() {
@@ -30,9 +43,6 @@
 		});
 		if (error) console.error(error);
 	}
-
-	let allNominations = $state<Record<string, unknown>>({});
-	let isSignedIn = $state<boolean>(false);
 
 	if (user) {
 		isSignedIn = true;
@@ -152,7 +162,16 @@
 <AwardBlocks {awards} {allNominations} {isSignedIn} />
 
 <div class="flex items-center justify-center py-8">
-	<Button onclick={() => handleSubmit(allNominations)} class="h-16 text-3xl font-bold "
-		>Submit Nominations</Button
-	>
+	{#if !isLoading}
+		<Button onclick={() => handleSubmit(allNominations)} class="h-16 w-96 text-3xl font-bold">
+			Submit Nominations
+		</Button>
+	{:else}
+		<Button
+			variant="outline"
+			class="hover:text-color-primary hover-bg-color-primary h-16 w-96 text-3xl font-bold hover:bg-opacity-10 hover:text-opacity-10"
+		>
+			Submitting...</Button
+		>
+	{/if}
 </div>

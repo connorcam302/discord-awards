@@ -7,11 +7,13 @@ import { and, eq } from 'drizzle-orm';
 export const POST: RequestHandler = async ({ request }) => {
 	const { nominations, user } = await request.json();
 
+	console.log('adding');
+
 	// Ensure user exists
 	const userCheck = await db.select().from(users).where(eq(users.id, user.id));
 
 	if (!userCheck.length) {
-		await db.insert(users).values({ id: user.id, name: user.name });
+		await db.insert(users).values({ id: user.id, name: user.email });
 	}
 
 	// Validate and insert nominations
