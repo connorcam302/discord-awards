@@ -16,7 +16,8 @@
 		"db:generate": "drizzle-kit generate",
 		"db:migrate": "drizzle-kit migrate",
 		"db:studio": "drizzle-kit studio",
-		"awards:seed": "bun ./src/scripts/seedAwards.ts"
+		"awards:seed": "bun ./src/scripts/seedAwards.ts",
+		"nominees:seed": "bun ./src/scripts/seedNominees.ts"
 	},
 	"devDependencies": {
 		"@eslint/compat": "^1.4.0",
