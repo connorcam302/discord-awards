@@ -6,23 +6,24 @@
 	import type { PageData } from './$types';
 	import { supabaseClient } from '$lib/supabase/client';
 	import { PUBLIC_REDIRECT_URL } from '$env/static/public';
+	import NomineeBlocks from '$lib/components/blocks/NomineeBlocks.svelte';
 
 	let { data }: { data: PageData } = $props();
 
 	let { awards, user } = data;
 
-	let allNominations = $state<Record<string, unknown>>({});
+	let allVotes = $state<Record<string, unknown>>({});
 	let isSignedIn = $state<boolean>(false);
 	let isLoading = $state<boolean>(false);
 
-	const handleSubmit = (nominations: unknown) => {
+	const handleSubmit = (votes: unknown) => {
 		isLoading = true;
-		fetch('/api/nominations/add', {
+		fetch('/api/voting/add', {
 			method: 'POST',
-			body: JSON.stringify({ nominations, user })
+			body: JSON.stringify({ votes, user })
 		})
 			.then((res) => {
-				if (res.ok) alert('Nominations submitted!');
+				if (res.ok) alert('Votes submitted!');
 				if (res.status === 400) alert('Ensure all fields are filled in.');
 
 				isLoading = false;
@@ -47,6 +48,9 @@
 	if (user) {
 		isSignedIn = true;
 	}
+
+	$inspect(awards);
+	$inspect(allVotes);
 </script>
 
 <Header />
@@ -159,19 +163,21 @@
 	</div>
 {/if}
 
-<AwardBlocks {awards} {allNominations} {isSignedIn} />
+<NomineeBlocks {awards} {isSignedIn} bind:allVotes />
 
-<div class="flex items-center justify-center py-8">
-	{#if !isLoading}
-		<Button onclick={() => handleSubmit(allNominations)} class="h-16 w-96 text-3xl font-bold">
-			Submit Nominations
-		</Button>
-	{:else}
-		<Button
-			variant="outline"
-			class="hover:text-color-primary hover-bg-color-primary h-16 w-96 text-3xl font-bold hover:bg-opacity-10 hover:text-opacity-10"
-		>
-			Submitting...</Button
-		>
-	{/if}
-</div>
+{#if isSignedIn}
+	<div class="flex items-center justify-center py-8">
+		{#if !isLoading}
+			<Button onclick={() => handleSubmit(allVotes)} class="h-16 w-96 text-3xl font-bold">
+				Submit Votes
+			</Button>
+		{:else}
+			<Button
+				variant="outline"
+				class="hover:text-color-primary hover-bg-color-primary h-16 w-96 text-3xl font-bold hover:bg-opacity-10 hover:text-opacity-10"
+			>
+				Submitting...</Button
+			>
+		{/if}
+	</div>
+{/if}

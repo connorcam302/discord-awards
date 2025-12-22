@@ -1,9 +1,10 @@
 <script lang="ts">
 	import type { getAllAwards } from '$lib/server/db/functions';
-	import DuoAward from '../awards/DuoAward.svelte';
-	import GameAward from '../awards/GameAward.svelte';
-	import MiscAward from '../awards/MiscAward.svelte';
-	import SingleAward from '../awards/SingleAward.svelte';
+	import DuoAward from '../nominations/DuoAward.svelte';
+	import GameAward from '../nominations/GameAward.svelte';
+	import MiscAward from '../nominations/MiscAward.svelte';
+	import SingleAward from '../nominations/SingleAward.svelte';
+
 	let {
 		awards,
 		allNominations,

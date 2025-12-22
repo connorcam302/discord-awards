@@ -27,36 +27,44 @@ export const nominations = pgTable('nominations', {
 	createdAt: timestamp('created_at').defaultNow()
 });
 
-// --- FINAL NOMINEES (locked after nomination phase) ---
-export const finalNominees = pgTable('final_nominees', {
+export const nomineeEntities = pgTable('nominee_entities', {
 	id: uuid('id').primaryKey().defaultRandom(),
+
+	name: text('name'), // optional (clips might not have one)
+	textValue: text('text'), // for pure text awards
+	imageUrl: text('image_url'),
+	videoUrl: text('video_url'),
+
+	createdAt: timestamp('created_at').defaultNow()
+});
+
+export const awardNominees = pgTable('award_nominees', {
+	id: uuid('id').primaryKey().defaultRandom(),
+
 	awardId: uuid('award_id')
 		.references(() => awards.id)
 		.notNull(),
-	name: text('name').notNull()
+
+	createdAt: timestamp('created_at').defaultNow()
 });
 
-// --- VOTES ---
-export const votes = pgTable(
-	'votes',
-	{
-		id: uuid('id').primaryKey().defaultRandom(),
-		awardId: uuid('award_id')
-			.references(() => awards.id)
-			.notNull(),
-		nominee: text('nominee').notNull(),
-		submittedBy: uuid('submitted_by')
-			.references(() => users.id)
-			.notNull(),
-		createdAt: timestamp('created_at').defaultNow()
-	},
-	(table) => ({
-		uniqueVote: uniqueIndex('unique_vote').on(table.submittedBy, table.awardId)
-	})
-);
+export const awardNomineeMembers = pgTable('award_nominee_members', {
+	id: uuid('id').primaryKey().defaultRandom(),
+	awardNomineeId: uuid('award_nominee_id')
+		.references(() => awardNominees.id)
+		.notNull(),
+	nomineeEntityId: uuid('nominee_entity_id')
+		.references(() => nomineeEntities.id)
+		.notNull()
+});
 
-// --- SETTINGS (app state) ---
-export const settings = pgTable('settings', {
-	id: integer('id').primaryKey(), // always 1
-	phase: text('phase').notNull() // 'nominations' | 'voting' | 'results'
+export const votes = pgTable('votes', {
+	id: uuid('id').primaryKey().defaultRandom(),
+	userId: uuid('user_id')
+		.references(() => users.id)
+		.notNull(),
+	awardNomineeId: uuid('award_nominee_id')
+		.references(() => awardNominees.id)
+		.notNull(),
+	createdAt: timestamp('created_at').defaultNow()
 });

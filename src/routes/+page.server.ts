@@ -1,16 +1,25 @@
 import { db } from '$lib/server/db';
-import { getAllAwards, getUserNominations } from '$lib/server/db/functions';
+import {
+	getAllAwards,
+	getAllNominees,
+	getUserNominations,
+	getUserVotes
+} from '$lib/server/db/functions';
 import type { PageServerLoad } from './$types';
 
 export const load: PageServerLoad = async ({ locals: { safeGetSession } }) => {
 	const { session, user } = await safeGetSession();
-	const awards = await getAllAwards(db);
+
+	const awards = await getAllNominees(db);
 	if (user) {
-		const userNominations = await getUserNominations(db, user.id);
+		const userVotes = await getUserVotes(db, user.id);
+
+		console.log(userVotes);
 
 		for (const award of awards) {
-			const nomination = userNominations.find((n) => n.awardId === award.id);
-			award.initialValue = nomination?.nominee ?? '';
+			const nomination = userVotes[award.id];
+			console.log(nomination);
+			award.initialValue = nomination ?? '';
 		}
 	}
 
