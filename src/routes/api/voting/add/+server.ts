@@ -7,14 +7,12 @@ import { db } from '$lib/server/db';
 type VotePayload = Record<string, string>; // { [awardId]: nomineeId }
 
 export const POST: RequestHandler = async ({ request, locals }) => {
-	const { votes, user } = await request.json();
+	const { votes: submittedVotes, user }: { votes: VotePayload; user: { id: string } } =
+		await request.json();
 
 	if (!user) {
 		throw error(401, 'Not authenticated');
 	}
-
-	// ✅ Expect a single object
-	const submittedVotes: Record<string, string> = votes;
 
 	const entries = Object.entries(submittedVotes);
 
@@ -22,7 +20,6 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 		throw error(400, 'No votes submitted');
 	}
 
-	// Must vote in every category (no empty values)
 	const hasEmpty = entries.some(([, nomineeId]) => !nomineeId);
 	if (hasEmpty) {
 		throw error(400, 'You must vote in every category');
@@ -30,10 +27,6 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 
 	const awardIds = entries.map(([awardId]) => awardId);
 	const nomineeIds = entries.map(([, nomineeId]) => nomineeId);
-
-	// ─────────────────────────────────────────────
-	// 2️⃣ Ensure all awards with nominees were voted
-	// ─────────────────────────────────────────────
 
 	const awardsWithNominees = await db
 		.select({ awardId: awardNominees.awardId })
@@ -47,10 +40,6 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 	if (missingAwards.length > 0) {
 		throw error(400, 'You must vote in every category');
 	}
-
-	// ─────────────────────────────────────────────
-	// 3️⃣ Validate nominees belong to awards
-	// ─────────────────────────────────────────────
 
 	const validNominees = await db
 		.select({
@@ -68,12 +57,9 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 		}
 	}
 
-	// ─────────────────────────────────────────────
-	// 4️⃣ Overwrite existing votes (atomic)
-	// ─────────────────────────────────────────────
-
 	await db.transaction(async (tx) => {
 		// Delete existing votes
+		console.log(user.id);
 		await tx.delete(votes).where(eq(votes.userId, user.id));
 
 		// Insert new votes

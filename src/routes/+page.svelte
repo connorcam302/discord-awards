@@ -165,17 +165,19 @@
 
 <NomineeBlocks {awards} {isSignedIn} bind:allVotes />
 
-<div class="flex items-center justify-center py-8">
-	{#if !isLoading}
-		<Button onclick={() => handleSubmit(allVotes)} class="h-16 w-96 text-3xl font-bold">
-			Submit Votes
-		</Button>
-	{:else}
-		<Button
-			variant="outline"
-			class="hover:text-color-primary hover-bg-color-primary h-16 w-96 text-3xl font-bold hover:bg-opacity-10 hover:text-opacity-10"
-		>
-			Submitting...</Button
-		>
-	{/if}
-</div>
+{#if isSignedIn}
+	<div class="flex items-center justify-center py-8">
+		{#if !isLoading}
+			<Button onclick={() => handleSubmit(allVotes)} class="h-16 w-96 text-3xl font-bold">
+				Submit Votes
+			</Button>
+		{:else}
+			<Button
+				variant="outline"
+				class="hover:text-color-primary hover-bg-color-primary h-16 w-96 text-3xl font-bold hover:bg-opacity-10 hover:text-opacity-10"
+			>
+				Submitting...</Button
+			>
+		{/if}
+	</div>
+{/if}

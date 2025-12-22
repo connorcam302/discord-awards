@@ -23,13 +23,13 @@
 <div class="flex w-full flex-col items-center gap-16">
 	{#each awards as award, i (i)}
 		{#if award.type == 'image'}
-			<ImageAward {award} {handleVote} initialValue={award.nominees[0].id} {isSignedIn} />
+			<ImageAward {award} {handleVote} initialValue={award.initialValue} {isSignedIn} />
 		{:else if award.type == 'double'}
-			<DoubleAward {award} {handleVote} initialValue={award.nominees[0].id} {isSignedIn} />
+			<DoubleAward {award} {handleVote} initialValue={award.initialValue} {isSignedIn} />
 		{:else if award.type == 'text'}
-			<TextAward {award} {handleVote} initialValue={award.nominees[0].id} {isSignedIn} />
+			<TextAward {award} {handleVote} initialValue={award.initialValue} {isSignedIn} />
 		{:else if award.type == 'video'}
-			<VideoAward {award} {handleVote} initialValue={award.nominees[0].id} {isSignedIn} />
+			<VideoAward {award} {handleVote} initialValue={award.initialValue} {isSignedIn} />
 		{/if}
 	{/each}
 </div>
