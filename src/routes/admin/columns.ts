@@ -1,15 +1,12 @@
 import type { ColumnDef } from '@tanstack/table-core';
 
-// This type is used to define the shape of our data.
-// You can use a Zod schema here if you want.
-export type Payment = {
-	id: string;
-	amount: number;
-	status: 'pending' | 'processing' | 'success' | 'failed';
-	email: string;
+export type NominationData = {
+	awardName: string;
+	nominee: string;
+	user: string | null;
 };
 
-export const columns: ColumnDef<Payment>[] = [
+export const columns: ColumnDef<NominationData>[] = [
 	{
 		accessorKey: 'awardName',
 		header: 'Award Name'

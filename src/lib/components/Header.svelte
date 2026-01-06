@@ -2,7 +2,9 @@
 	<div class="container h-48 md:h-72">
 		<div class="floodlight floodlight-left -z-20"></div>
 		<div class="floodlight floodlight-right -z-20"></div>
-		<div class="bg-background absolute top-[110px] -z-10 h-96 w-dvw md:top-[178px]"></div>
+		<div
+			class="bg-background absolute top-[110px] -z-10 h-96 w-svw overflow-auto md:top-[178px]"
+		></div>
 		<div class="relative w-full">
 			<div
 				class="font-montserrat text left-0 right-0 z-10 h-8 text-center text-[1.85rem] tracking-widest md:h-16 md:text-[4rem]"

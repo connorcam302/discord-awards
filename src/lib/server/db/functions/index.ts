@@ -3,3 +3,6 @@ export * from './nominations/getUserNominations';
 export * from './nominations/getAllNominations';
 export * from './nominations/getAllNominees.ts';
 export * from './nominations/getUserVotes.ts';
+export * from './nominations/getAllVotingResults';
+export * from './nominations/getVotersForNominee';
+export * from './winners/getAllResults';

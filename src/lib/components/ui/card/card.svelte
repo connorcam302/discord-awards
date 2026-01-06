@@ -26,13 +26,13 @@
 </script>
 
 <div
-	class="card-container w-full max-w-2xl"
+	class="card-container w-fit"
 	bind:this={cardElement}
 	onmousemove={handleMouseMove}
 	role="presentation"
 	{...restProps}
 >
-	<div class="card bg-card text-card-foreground w-full py-6">
+	<div class="card bg-card text-card-foreground w-fit">
 		{@render children?.()}
 	</div>
 </div>
