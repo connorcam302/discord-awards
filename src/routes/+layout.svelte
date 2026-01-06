@@ -10,8 +10,6 @@
 	let { children, data } = $props();
 	let { session, user } = data;
 
-	console.log(user);
-
 	async function signInWithGoogle() {
 		const { error } = await supabaseClient.auth.signInWithOAuth({
 			provider: 'google',

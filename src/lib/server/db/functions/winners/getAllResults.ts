@@ -130,5 +130,7 @@ export const getAllResults = async (db: ReturnType<typeof drizzle>) => {
 		'Nightmare Award'
 	];
 
-	return results;
+	return results.sort((a, b) => {
+		return sortOrder.indexOf(a.awardName) - sortOrder.indexOf(b.awardName);
+	});
 };

@@ -17,9 +17,6 @@
 		isSignedIn = true;
 	}
 
-	$inspect(awards);
-	$inspect(allVotes);
-
 	function scrollToNext() {
 		if (currentIndex < awards.length - 1) {
 			currentIndex++;

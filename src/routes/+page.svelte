@@ -49,9 +49,6 @@
 	if (user) {
 		isSignedIn = true;
 	}
-
-	$inspect(awards);
-	$inspect(allVotes);
 </script>
 
 <div class="mx-auto max-w-screen-lg">
